@@ -24,6 +24,6 @@
     <None Include="..\..\icon.png" Pack="true" PackagePath="" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Sensors.Atmospheric.Sht4x\Driver\Sensors.Atmospheric.Sht4x.csproj" />
+    <PackageReference Include="Meadow.Foundation.Sensors.Atmospheric.Sht4x" Version="*" />
   </ItemGroup>
 </Project>

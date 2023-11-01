@@ -24,7 +24,7 @@
     <None Include="..\..\icon.png" Pack="true" PackagePath="" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\ICs.ADCs.Mcp3xxx\Driver\ICs.ADC.Mcp3xxx.csproj" />
-    <ProjectReference Include="..\..\..\..\Meadow.Foundation\Source\Meadow.Foundation.Peripherals\Sensors.Power.CurrentTransducer\Driver\Sensors.Power.CurrentTransducer.csproj" />
+    <PackageReference Include="Meadow.Foundation.ICs.ADCs.Mcp3xxx" Version="*" />
+    <PackageReference Include="Meadow.Foundation.Sensors.Power.CurrentTransducer" Version="*" />
   </ItemGroup>
 </Project>
