@@ -11,7 +11,7 @@ namespace Meadow.Foundation.mikroBUS.Sensors
     /// </summary>
     public class C420R : PollingSensorBase<Current>
     {
-        private IAnalogInputPort _adc;
+        private IAnalogInputPort analogInputPort = default!;
 
         /// <summary>
         /// Reference voltage (2.048V)
@@ -54,13 +54,13 @@ namespace Meadow.Foundation.mikroBUS.Sensors
 
         private void InitializeMcp(int sampleCount = 1, TimeSpan? sampleInterval = null)
         {
-            _adc = mcp3201.CreateAnalogInputPort(sampleCount, sampleInterval ?? TimeSpan.FromSeconds(5), ReferenceVoltage);
+            analogInputPort = mcp3201.CreateAnalogInputPort(sampleCount, sampleInterval ?? TimeSpan.FromSeconds(5), ReferenceVoltage);
         }
 
         /// <inheritdoc/>
         protected override async Task<Current> ReadSensor()
         {
-            var volts = await _adc.Read();
+            var volts = await analogInputPort.Read();
             return new Current(volts.Volts / 100d);
         }
     }

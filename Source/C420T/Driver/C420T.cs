@@ -21,6 +21,9 @@ namespace Meadow.Foundation.mikroBUS.Sensors
         private readonly IAnalogOutputPort dac;
         private readonly bool portCreated;
 
+        /// <summary>
+        /// Gets a value indicating whether the object has been disposed
+        /// </summary>
         public bool IsDisposed { get; private set; }
 
         /// <summary>

@@ -11,14 +11,14 @@ namespace Meadow.Foundation.mikroBUS.Sensors.Gnss
         /// <summary>
         /// Creates a new CGNSS10 object
         /// </summary>
-        public CGNSS10(ISpiBus spiBus, IDigitalOutputPort chipSelectPort, IDigitalOutputPort resetPort = null)
+        public CGNSS10(ISpiBus spiBus, IDigitalOutputPort chipSelectPort, IDigitalOutputPort? resetPort = null)
             : base(spiBus, chipSelectPort, resetPort)
         { }
 
         /// <summary>
         /// Creates a new CGNSS10 object
         /// </summary>
-        public CGNSS10(ISpiBus spiBus, IPin chipSelectPin, IPin resetPin = null)
+        public CGNSS10(ISpiBus spiBus, IPin chipSelectPin, IPin? resetPin = null)
             : base(spiBus, chipSelectPin, resetPin)
         { }
     }

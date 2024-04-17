@@ -16,7 +16,7 @@ namespace Meadow.Foundation.mikroBUS.Sensors
         /// </summary>
         public Voltage ReferenceVoltage { get; protected set; } = new Voltage(2.048, Voltage.UnitType.Volts);
 
-        readonly Mcp3201 mcp3201;
+        readonly Mcp3201 mcp3201 = default!;
 
         /// <summary>
         /// Creates a new CLEM object

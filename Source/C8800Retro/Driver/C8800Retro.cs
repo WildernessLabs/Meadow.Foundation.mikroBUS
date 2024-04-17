@@ -15,7 +15,7 @@ namespace Meadow.Foundation.mikroBUS.Displays
         /// <param name="i2cBus">The I2C bus</param>
         /// <param name="buttonInterruptPin">The interrupt pin</param>
         /// <param name="address">The I2C address</param>
-        public C8800Retro(II2cBus i2cBus, IPin buttonInterruptPin, byte address = 0) 
+        public C8800Retro(II2cBus i2cBus, IPin buttonInterruptPin, byte address = 0)
             : base(i2cBus, buttonInterruptPin, address)
         { }
 
@@ -29,7 +29,7 @@ namespace Meadow.Foundation.mikroBUS.Displays
         {
             KeyScanButtonType buttonType = KeyScanButtonType.None;
 
-            if(row == ButtonRow.A)
+            if (row == ButtonRow.A)
             {
                 buttonType = column switch
                 {
@@ -74,7 +74,7 @@ namespace Meadow.Foundation.mikroBUS.Displays
                 };
             }
 
-            return KeyScanButtons[buttonType];
+            return KeyScanButtons![buttonType];
         }
     }
 }
