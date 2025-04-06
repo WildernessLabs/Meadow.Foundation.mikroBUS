@@ -54,7 +54,7 @@ namespace Meadow.Foundation.mikroBUS.Sensors
         /// Creates a new CACCurrent object using an analog input for readings
         /// </summary>
         /// <param name="analogInput">The analog input connected to the Click's AN port</param>
-        public CACCurrent(IAnalogInputPort analogInput)
+        public CACCurrent(IObservableAnalogInputPort analogInput)
         {
             base.Initialize(analogInput, new Voltage(1.8, Voltage.UnitType.Volts), new Current(30, Units.Current.UnitType.Amps));
         }
