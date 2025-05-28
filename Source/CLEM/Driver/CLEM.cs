@@ -1,4 +1,4 @@
-﻿using Meadow.Foundation.ICs.IOExpanders;
+﻿using Meadow.Foundation.ICs.ADC;
 using Meadow.Foundation.Sensors.Power;
 using Meadow.Hardware;
 using Meadow.Units;
